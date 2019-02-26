@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>従業員No.</th>
+      <th>氏名</th>
+      <th>年齢</th>
+      <th>部署</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empList">
+      <td><a routerLink="/emp/{{emp.id}}">{{emp.id}}</a></td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.dept}}</td>
+      <td><button class="button is-danger is-small" (click)="delete(emp.id)">削除</button></td>
+    </tr>
+  </tbody>
+</table>
+<a class="button" routerLink="/emp/create">新規登録</a>
