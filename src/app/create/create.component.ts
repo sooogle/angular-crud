@@ -18,8 +18,6 @@ export class CreateComponent implements OnInit {
   }
 
   create() {
-    this.emp.dept = '1';
-    console.log(JSON.stringify(this.emp));
     this.service.create(this.emp).subscribe(emp => this.router.navigateByUrl('/'));
   }
 

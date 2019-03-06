@@ -13,7 +13,7 @@ export class EmployeeService {
     }
 
     find(id: string): Observable<Employee> {
-        return this.http.get<Employee>('/api/employee/' + id);
+        return this.http.get<Employee>(`/api/employee/${id}`);
     }
 
     create(emp: Employee): Observable<Employee> {
@@ -21,7 +21,7 @@ export class EmployeeService {
     }
 
     update(emp: Employee): Observable<Employee> {
-        return this.http.put<Employee>('/api/employee/' + emp.id, emp);
+        return this.http.put<Employee>(`/api/employee/${emp.id}`, emp);
     }
 
     delete(id: string): Observable<Employee> {

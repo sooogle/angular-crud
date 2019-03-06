@@ -3,5 +3,4 @@ export class Employee {
     public name: string;
     public age: number;
     public sex = '1';
-    public dept: string;
 }
